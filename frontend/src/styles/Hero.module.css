@@ -1,40 +1,63 @@
 .hero {
-    background: url("../assets/hero-banner.jpg") center/cover no-repeat;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     text-align: center;
     color: white;
-    position: relative;
+    margin-top: 80px; /* Prevent overlap with navbar */
   }
   
-  .overlay {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 30px;
-    border-radius: 8px;
+  .hero img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    filter: brightness(60%);
   }
   
-  h1 {
-    font-size: 48px;
-    margin-bottom: 15px;
+  .heroOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
   }
   
-  p {
-    font-size: 20px;
-    margin-bottom: 20px;
+  .heroOverlay h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
   }
   
-  .ctaButton {
-    padding: 12px 25px;
-    background: #f4b400;
-    color: black;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
+  .heroOverlay p {
+    font-size: 1.2rem;
   }
-  
-  .ctaButton:hover {
-    background: #ffa000;
-  }
-  
+
+
+    /* ✅ Responsive Fixes */
+    @media (max-width: 1024px) {
+        .hero img {
+          height: 400px;
+        }
+      
+        .heroOverlay h1 {
+          font-size: 2.5rem;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .hero img {
+          height: 300px;
+        }
+      
+        .heroOverlay {
+          padding: 15px;
+        }
+      
+        .heroOverlay h1 {
+          font-size: 2rem;
+        }
+      }
+      

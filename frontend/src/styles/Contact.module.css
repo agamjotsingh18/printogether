@@ -1,82 +1,55 @@
-.contact {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #fff;
+/* ✅ Hero Section */
+  
+.ctaBtn {
+    display: inline-block;
+    margin-top: 15px;
+    background: #f39c12;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background 0.3s;
   }
   
-  h2 {
-    font-size: 36px;
+  .ctaBtn:hover {
+    background: #e67e22;
+  }
+  
+
+  
+  /* ✅ CTA Section */
+  .cta {
+    background: linear-gradient(to right, #007bff, #6610f2);
+    color: white;
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .cta h2 {
+    font-size: 2.5rem;
     margin-bottom: 10px;
   }
   
-  p {
-    font-size: 18px;
-    color: #555;
+  .cta p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
   }
   
-  .contactContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 20px;
-  }
-  
-  .contactForm {
-    max-width: 400px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .contactForm input,
-  .contactForm textarea {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-  }
-  
-  .contactForm button {
-    background-color: #ff6600;
-    color: white;
-    padding: 12px;
-    font-size: 18px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .contactForm button:hover {
-    background-color: #cc5200;
-  }
-  
-  .contactInfo {
-    max-width: 300px;
-    text-align: left;
-  }
-  
-  .contactInfo p {
-    margin: 8px 0;
-  }
-  
-  .socialLinks {
-    margin-top: 15px;
-  }
-  
-  .socialLinks a {
+  .cta a {
     display: inline-block;
-    margin-right: 10px;
-    color: #0077cc;
-    font-size: 16px;
+    background: #ffcc00;
+    color: black;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1.2rem;
     text-decoration: none;
-    transition: 0.3s;
+    font-weight: bold;
+    transition: background 0.3s;
   }
   
-  .socialLinks a:hover {
-    color: #0056a3;
+  .cta a:hover {
+    background: #ff9900;
   }
   
