@@ -1,0 +1,273 @@
+.services {
+  padding: 60px 5%;
+  background: linear-gradient(135deg, #f9f9f9, #e6f3ff);
+}
+
+.section-title {
+  font-size: 2rem; /* Reduced for smaller screens */
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.section-subtitle {
+  font-size: 1rem; /* Reduced for smaller screens */
+  color: #666;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.services-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.service-row {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.service-category {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+}
+
+.service-icon {
+  font-size: 2rem; /* Reduced for smaller screens */
+  color: #ff6600;
+}
+
+.service-name {
+  font-size: 1.25rem; /* Reduced for smaller screens */
+  font-weight: 600;
+  color: #333;
+}
+
+.service-items {
+  flex: 3;
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 10px;
+}
+
+.service-items::-webkit-scrollbar {
+  display: none;
+}
+
+.service-card {
+  background: #e9eaf2;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 calc(25% - 15px); /* Each card takes 25% width minus gap */
+  box-sizing: border-box;
+  overflow: visible;
+  position: relative;
+}
+
+.service-card:hover {
+  background: #dcdde2;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.service-image {
+  width: 100%;
+  height: 200px; /* Reduced for smaller screens */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.service-item-name {
+  font-size: 0.9rem; /* Reduced for smaller screens */
+  margin: 0;
+  color: #555;
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  transition: background 0.3s ease;
+  right: -20px;
+}
+
+.scroll-button:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.scroll-button svg {
+  color: #333;
+  font-size: 1.2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .service-card {
+    flex: 0 0 calc(33.33% - 15px); /* 3 cards per row */
+  }
+
+  .service-icon {
+    font-size: 1.8rem;
+  }
+
+  .service-name {
+    font-size: 1.1rem;
+  }
+
+  .service-image {
+    height: 130px;
+  }
+
+  .service-item-name {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    flex: 0 0 calc(50% - 15px); /* 2 cards per row */
+  }
+
+  .service-icon {
+    font-size: 1.5rem;
+  }
+
+  .service-name {
+    font-size: 1rem;
+  }
+
+  .service-image {
+    height: 170px;
+  }
+
+  .service-item-name {
+    font-size: 0.8rem;
+  }
+
+  .scroll-button {
+    display: none; /* Hide scroll buttons on smaller screens */
+  }
+}
+
+@media (max-width: 500px) {
+  .services {
+    padding: 40px 5%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    order: 1; /* Move title to the top */
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+    order: 2; /* Move subtitle below the title */
+    margin-bottom: 20px;
+  }
+
+  .service-category{
+    justify-content: center;
+  }
+
+  .services-container {
+    order: 3; /* Move service rows below the subtitle */
+    margin-top: 20px; /* Add margin to separate subtitle and service rows */
+  }
+
+  .service-row {
+    display: block;
+  }
+  
+  .service-items {
+    flex: 3;
+    display: flex;
+    gap: 15px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 10px;
+  }
+  
+
+  .service-card {
+    flex: 0 0 calc(50% - 15px); /* 2 cards per row */
+  }
+
+  .service-icon {
+    font-size: 1.2rem;
+  }
+
+  .service-name {
+    font-size: 0.9rem;
+  }
+
+  .service-image {
+    height: 150px;
+  }
+
+  .service-item-name {
+    font-size: 0.75rem;
+  }
+}
+
+
+
+.services {
+  padding: 40px 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  order: 1; /* Move title to the top */
+}
+
+.section-subtitle {
+  font-size: 0.9rem;
+  order: 2; /* Move subtitle below the title */
+  margin-bottom: 20px;
+}
+
+.services-container {
+  order: 3; /* Move service rows below the subtitle */
+  margin-top: 20px; /* Add margin to separate subtitle and service rows */
+}
+

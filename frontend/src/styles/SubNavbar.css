@@ -1,0 +1,175 @@
+.sub-navbar {
+  background: #ffffff;
+  position: sticky;
+  top: 60px;
+  z-index: 1001;
+  padding: 12px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.sub-nav-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sub-nav-item {
+  position: relative;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  padding: 10px 5px;
+  transition: color 0.3s ease-in-out;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.sub-nav-item:hover {
+  color: #ff6600;
+}
+
+/* Corporate Gifting Item */
+.corporate-item {
+  color: #ff6600; /* White text */
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.corporate-item:hover {
+  color: black; /* Keep text white on hover */
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: absolute;
+  top: 100%; /* Position below the parent item */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 507px; /* Minimum width for two columns */
+  max-width: 800px; /* Maximum width for the dropdown */
+  z-index: 1001;
+  padding: 20px;
+  opacity: 0; /* Hide by default */
+  visibility: hidden; /* Hide by default */
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.sub-nav-item:hover .dropdown {
+  opacity: 1; /* Show on hover */
+  visibility: visible;
+}
+
+/* Dropdown Grid Layout */
+.dropdown-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 20px; /* Space between columns */
+}
+
+.dropdown-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dropdown-subcategory {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.dropdown-subcategory:hover {
+  color: #ff6600;
+}
+
+.dropdown-products {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.dropdown-product-item {
+  font-size: 0.9rem;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.dropdown-product-item:hover {
+  color: #ff6600;
+}
+
+/* Responsive Adjustments for 900px to 1024px */
+@media (min-width: 900px) and (max-width: 1400px) {
+  .sub-nav-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center items horizontally */
+    gap: 10px; /* Reduce space between items */
+    max-width: 1200px;
+    margin: auto auto;
+    padding: 0 20px;
+    align-items: center;
+  }
+
+  .sub-nav-item {
+    font-size: 0.8rem; /* Reduce font size */
+    padding: 8px 0; /* Reduce padding */
+    flex: 0 1 auto; /* Allow items to shrink but not grow */
+    text-align: center; /* Center align text */
+    white-space: nowrap; /* Prevent text from wrapping */
+    margin: 0 15px; /* Add small horizontal margin for spacing */
+  }
+
+  .sub-nav-item {
+    font-size: 0.8rem; /* Reduce font size */
+    padding: 8px 0; /* Reduce padding */
+    flex: 0 0 24%; /* Allow items to grow and shrink, with a base width of 22% */
+    text-align: center; /* Center align text */
+    white-space: nowrap; /* Prevent text from wrapping */
+    margin: 0 5px; /* Add small horizontal margin for spacing */
+  }
+
+  /* Adjust Dropdown for 900px to 1024px */
+  .dropdown {
+    min-width: 400px; /* Reduce minimum width */
+    max-width: 90vw; /* Set max-width to 90% of viewport width */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+  }
+
+  .dropdown-grid {
+    gap: 15px; /* Reduce gap between columns */
+  }
+
+  .dropdown-column {
+    gap: 8px; /* Reduce gap between items */
+  }
+
+  .dropdown-subcategory {
+    font-size: 0.9rem; /* Reduce font size */
+  }
+
+  .dropdown-product-item {
+    font-size: 0.8rem; /* Reduce font size */
+  }
+}
+
+/* Hide Sub-navbar on Mobile Screens */
+@media (max-width: 900px) {
+  .sub-navbar {
+    display: none !important; /* Force hiding at any cost */
+  }
+}

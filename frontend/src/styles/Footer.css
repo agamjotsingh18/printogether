@@ -1,0 +1,159 @@
+.footer {
+    background: #222;
+    color: white;
+    padding: 40px 5%;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+
+  .footer-logo{
+    margin: 0 20px;
+  }
+
+  .footer-heading {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .footer-column a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+  }
+  
+  .footer-column a:hover {
+    color: #ff6600;
+  }
+  
+  /* Contact Section */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .contact-item {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .contact-item a {
+    color: #bbb;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+  
+  .contact-item a:hover {
+    color: white;
+  }
+  
+  /* Social Media Icons */
+  .footer-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  
+  .social-icon {
+    font-size: 22px;
+    padding: 8px;
+    border-radius: 50%;
+    background: #444;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .instagram:hover { background: #E1306C; }
+  .facebook:hover { background: #3b5998; }
+  .linkedin:hover { background: #0077B5; }
+  .pinterest:hover { background: #BD081C; }
+  
+  /* Copyright */
+  .footer-text {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #bbb;
+    padding-top: 30px;
+  }
+  
+  .footer-brand {
+    color: #B4B8D4;
+    text-decoration: none;
+  }
+  
+  .footer-brand:hover {
+    color: white;
+  }
+
+
+  .map-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 300px; /* Adjust the width as needed */
+    height: 150px; /* Adjust the height as needed */
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* 🔹 RESPONSIVE DESIGN */
+  
+  /* Tablets (768px - 1024px) */
+  @media (max-width: 1024px) {
+    .footer-container {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .footer-column {
+      flex: 1 1 40%;
+      text-align: center;
+    }
+    .footer-social {
+      justify-content: center;
+    }
+
+    .contact-item {
+        display: flex;
+        justify-content: center;
+      }
+  }
+  
+  /* Mobile Devices (Below 768px) */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+    .footer-column {
+      flex: 1 1 100%;
+    }
+    .footer-social {
+      justify-content: center;
+    }
+    .contact-item {
+        display: flex;
+        justify-content: center;
+      }
+  }
+  

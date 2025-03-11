@@ -1,27 +1,50 @@
+require('dotenv').config(); // Load environment variables from .env file
 const express = require("express");
-const mongoose = require("mongoose");
 const cors = require("cors");
-const dotenv = require("dotenv");
-const inquiryRoutes = require("./routes/inquiries");
-
-// Initialize environment variables
-dotenv.config();
+const nodemailer = require("nodemailer");
 
 const app = express();
+const PORT = process.env.PORT || 5000;
 
-// Middleware
 app.use(cors());
 app.use(express.json());
 
-// Routes
-app.use("/api/inquiries", inquiryRoutes);
+// Nodemailer configuration
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.EMAIL_USER, // Email from .env
+    pass: process.env.EMAIL_PASS, // App password from .env
+  },
+});
 
-// Connect to MongoDB
-const PORT = process.env.PORT || 5000;
-mongoose
-  .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => {
-    console.log("Connected to MongoDB");
-    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-  })
-  .catch((err) => console.error(err));
+// Email endpoint
+app.post("/send-email", (req, res) => {
+  const { name, email, message } = req.body;
+
+  const mailOptions = {
+    from: process.env.EMAIL_USER, // Use the email from .env
+    to: process.env.EMAIL_USER, // Send to yourself (or another email)
+    subject: `New Message from ${name}`,
+    text: `
+      Name: ${name}
+      Email: ${email}
+      Message: ${message}
+    `,
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error("Error sending email:", error);
+      res.status(500).send("Error sending email");
+    } else {
+      console.log("Email sent:", info.response);
+      res.status(200).send("Email sent successfully");
+    }
+  });
+});
+
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
