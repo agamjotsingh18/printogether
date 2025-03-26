@@ -1,0 +1,67 @@
+/* General Styling */
+.about-container {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1.1rem;
+  }
+  
+  .highlight {
+    color: #e74c3c;
+    font-weight: bold;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  /* Stats Section */
+  .stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .stat-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    flex: 1 1 200px;
+    max-width: 250px;
+  }
+  
+  .stat-item h2 {
+    font-size: 3rem;
+    color: #e74c3c;
+    margin-bottom: 10px;
+  }
+  
+  .stat-item p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .stats-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .stat-item {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }

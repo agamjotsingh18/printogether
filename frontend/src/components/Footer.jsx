@@ -1,10 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import { FaInstagram, FaEnvelope, FaFacebookF, FaLinkedinIn, FaPinterestP, FaPhoneAlt } from "react-icons/fa";
 import logo from "../assets/logoP.png";
 import "../styles/Footer.css";
+import ToastNotification from "./ToastNotification"; // Import the ToastNotification component
 
 const Footer = () => {
+  const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+
+    // Send POST request to /subscribe endpoint
+    fetch("http://localhost:5000/subscribe", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email }),
+    })
+      .then((response) => response.text())
+      .then((data) => {
+        setToastMessage(data); // Set the toast message
+        setShowToast(true); // Show the toast
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        setToastMessage("Failed to subscribe. Please try again."); // Error message
+        setShowToast(true); // Show the toast
+      });
+  };
+
   return (
     <Box className="footer">
       <Box className="footer-container">
@@ -19,6 +47,23 @@ const Footer = () => {
           <a href="/about">About us</a>
           <a href="mailto:printfusionindia@gmail.com?subject=Job Application">Careers</a>
           <a href="/blog">Blog</a>
+
+          {/* Newsletter Section */}
+          <Box className="newsletter">
+            <Typography className="footer-heading">Subscribe to our Newsletter</Typography>
+            <form className="newsletter-form" onSubmit={handleSubscribe}>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                className="newsletter-input"
+                required
+              />
+              <button type="submit" className="newsletter-button">
+                Subscribe
+              </button>
+            </form>
+          </Box>
         </Box>
 
         {/* Important Links */}
@@ -42,7 +87,7 @@ const Footer = () => {
           <Box className="map-container">
             <iframe
               title="Print Fusion Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.041304849228!2d77.0484673150827!3d28.62803098241683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04f8b1f5f5f1%3A0x1b9f8b1f5f5f5f1!2sF-17%20Mohan%20Garden%2C%20Pipal%20Wala%20Rd%2C%20Uttam%20Nagar%2C%20New%20Delhi%2C%20India!5e0!3m2!1sen!2sin!4v1633083083083!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.972890009255!2d77.04530989999999!3d28.6305746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d05362adfb89b%3A0x8f8e3e7bb27db4d0!2sPrint%20Fusion!5e0!3m2!1sen!2sin!4v1741737484226!5m2!1sen!2sin" 
               width="100%"
               height="150"
               style={{ border: 0, borderRadius: "8px" }}
@@ -73,6 +118,14 @@ const Footer = () => {
       <Typography className="footer-text">
         © 2025 <a href="/" className="footer-brand">Print Fusion</a>. All rights reserved.
       </Typography>
+
+      {/* Toast Notification */}
+      {showToast && (
+        <ToastNotification
+          message={toastMessage}
+          onClose={() => setShowToast(false)}
+        />
+      )}
     </Box>
   );
 };

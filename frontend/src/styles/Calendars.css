@@ -4,6 +4,19 @@
     text-align: center;
 }
 
+.calendar-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    display: block; /* Make the link cover the entire calendar area */
+  }
+
+.calendar-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ff6600;
+    margin-top: 5px;
+  }
+
 .section-title {
     font-size: 2.5rem;
     font-weight: bold;

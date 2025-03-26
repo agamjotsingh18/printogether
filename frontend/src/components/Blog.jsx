@@ -1,23 +1,28 @@
 import React from "react";
 import { Box, Typography, Card, CardContent, CardMedia } from "@mui/material";
 import "../styles/Blog.css";
+import ThreeDPrinting from "../assets/3d-printing.avif"
+import EcoPrinting from  "../assets/eco-printing.webp";
+import BusinessCardDesign from  "../assets/business-card-design.webp";
+
+
 
 const blogPosts = [
   {
     title: "The Future of 3D Printing",
-    image: "../assets/3d-printing.jpg",
+    image: ThreeDPrinting,
     description: "How 3D printing is revolutionizing the manufacturing industry.",
-    link: "/blog/future-3d-printing",
+    link: "/blog/future-of-3D-printing",
   },
   {
     title: "Eco-Friendly Printing Solutions",
-    image: "../assets/eco-printing.jpg",
+    image: EcoPrinting,
     description: "Sustainable printing methods that help save the environment.",
-    link: "/blog/eco-friendly-printing",
+    link: "/blog/eco-friendly-printing-solutions",
   },
   {
     title: "Top Business Card Designs in 2025",
-    image: "../assets/business-card-design.jpg",
+    image: BusinessCardDesign,
     description: "Explore the latest trends in business card design for professionals.",
     link: "/blog/business-card-trends",
   },
@@ -26,8 +31,8 @@ const blogPosts = [
 const Blog = () => {
   return (
     <Box className="blog-page" sx={{ marginTop: "50px", paddingBottom: "50px" }}>
-      <Typography className="blog-title">Latest from Our Blog</Typography>
-      <Box className="blog-container">
+      <Typography className="blog-title"  sx={{ fontSize: "30px", color: "#ff6600", fontWeight:"bolder" }}>Latest from Our Blog</Typography>
+      <Box className="blog-container" sx={{ marginTop: "50px" }}>
         {blogPosts.map((post, index) => (
           <Card className="blog-card" key={index}>
             <CardMedia component="img" image={post.image} alt={post.title} className="blog-image" />

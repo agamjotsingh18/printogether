@@ -76,6 +76,20 @@
     background-color: #e65c00;
 }
 
+.acrylic-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    display: block; /* Make the link cover the entire product area */
+  }
+
+.acrylic-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ff6600;
+    margin-top: 5px;
+  }
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .acrylic-item {

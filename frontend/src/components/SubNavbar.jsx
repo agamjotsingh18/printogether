@@ -24,7 +24,7 @@ const categories = [
         name: "Envelopes",
         link: "/services/business-essentials/envelopes",
         products: [
-          "#10 Envelope (long)",
+          "hash10 Envelope (long)",
           "A5 Envelope",
           "A6 Envelope",
           "Kraft Envelope",
@@ -32,12 +32,12 @@ const categories = [
       },
       {
         name: "Letterheads",
-        link: "/services/business-essentials/letterheads",
+        link: null,
         products: ["Custom Letterheads", "Prescription Note Pad"],
       },
       {
         name: "Invoices",
-        link: "/services/business-essentials/invoices",
+        link: null,
         products: [
           "Full Colour Printed Bill Books",
           "Black and White Printed Bill Books",
@@ -84,7 +84,7 @@ const categories = [
       },
       {
         name: "Brochures",
-        link: "/services/marketing-materials/brochures",
+        link: null,
         products: ["Half Fold Brochure", "Tri Fold Brochure"],
       },
       { name: "Standees", link: "/services/marketing-materials/standees" },
@@ -122,7 +122,7 @@ const categories = [
       },
       {
         name: "Paper Bags",
-        link: "/services/packaging-labels/paper-bags",
+        link: null,
         products: [
           "Gift Paper Bags",
           "Takeout Paper Bags",
@@ -136,9 +136,22 @@ const categories = [
     name: "Personalized Gifts",
     subcategories: [
       {
+        name: "Photo Frames",
+        link: "/services/personalized-gifts/photo-frames",
+        products: [
+          "Photo with LED Frames",
+          "Photo with Classic Frames",
+          "Photo with Wall Frames",
+          "Canvas Photo with Frames",
+          "Matte Photo with Frames",
+          "Custom Acrylic Photo Frames",
+          "Frameless Photo Frames",
+        ],
+      },
+      {
         name: "Mugs",
         link: "/services/personalized-gifts/mugs",
-        products: ["Standard Mug", "Mini Mug"],
+        products: ["Standard Mug", "Mini Mug", "Shimmer Dark Grey Mug", "Regal Black Mug","Traveler Black Mug","Sleek Black Mug"],
       },
       // {
       //   name: "Bottles",
@@ -152,19 +165,6 @@ const categories = [
           "Round Neck T-shirts",
           "Polo T-shirts",
           "V-Neck T-shirts",
-        ],
-      },
-      {
-        name: "Photo Frames",
-        link: "/services/personalized-gifts/photo-frames",
-        products: [
-          "Photo with LED Frames",
-          "Photo with Classic Frames",
-          "Photo with Wall Frames",
-          "Canvas Photo with Frames",
-          "Matte Photo with Frames",
-          "Custom Acrylic Photo Frames",
-          "Frameless Photo Frames",
         ],
       },
       {
@@ -198,9 +198,9 @@ const categories = [
         link: "/services/tshirt-printing/hoodies",
         products: [
           "Custom Printed Zipper Hoodie",
-          "Custom Printed Pullover Hoodies",
-          "Embroidered Zip Hoodies",
-          "Embroidered Pullover Hoodies",
+          "Custom Printed Pullover Hoodie",
+          "Embroidered Zip Hoodie",
+          "Embroidered Pullover Hoodie",
         ],
       },
       { name: "Sweatshirts", link: "/services/tshirt-printing/sweatshirts" },
@@ -219,7 +219,73 @@ const categories = [
   },
   {
     name: "Corporate Gifting",
-    subcategories: [],
+    link: "/services/corporate-gifting",
+    subcategories: [
+      {
+        name: "Welcome Kits",
+        link: "/services/corporate-gifting/welcome-kits",
+        products: [
+          "Corporate Executive Kit",
+          "Creative Professional Kit",
+          "Eco-Friendly Kit",
+          "Startup Essentials Kit",
+        ],
+      },
+      {
+        name: "Festive Hampers",
+        link: "/services/corporate-gifting/festive-hampers",
+        products: [
+          "Color Splash Hamper",
+          "Eco-Friendly Holi Hamper",
+          "Premium Holi Hamper",
+        ],
+      },
+      {
+        name:"Drinkware",
+        link: "/services/corporate-gifting/drinkware",
+        products:[],
+      },
+      {
+        name:"Bags",
+        link: "/services/corporate-gifting/bags",
+        products:[],
+      },
+      {
+        name:"Awards & Trophies",
+        link: "/services/corporate-gifting/awards-trophies",
+        products:[],
+      },
+      {
+        name:"Certificates",
+        link: "/services/corporate-gifting/certifcates",
+        products:[],
+      },
+      {
+        name: "Duo Sets",
+        link: "/services/corporate-gifting/duo-sets",
+        products: [
+          "Eco-Grip Notebook",
+          "Elegant Journal Combo",
+          "Elite Executive Combo",
+          "Classic Leather Combo",
+        ],
+      },
+      {
+        name:"Pens",
+        link: "/services/corporate-gifting/pens",
+        products:[],
+      },
+      // {
+      //   name: "Engagement Kits",
+      //   link: "/services/corporate-gifting/engagement-kits",
+      //   products: [
+      //     "Employee Engagement Kit",
+      //     "Customer Engagement Kit",
+      //     "Event Engagement Kit",
+      //     "Custom Branded Engagement Kit",
+      //   ],
+      // },
+    ],
   },
 ];
 

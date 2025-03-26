@@ -20,7 +20,7 @@ const Contact = () => {
     }
   
     try {
-      const response = await fetch("http://localhost:5000/send-email", {
+      const response = await fetch("https://print-fusion.onrender.com/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -41,7 +41,6 @@ const Contact = () => {
   
     setTimeout(() => setSuccessMessage(""), 5000);
   };
-
   return (
     <Box className="contact-page">
       <Paper elevation={3} className="contact-box">

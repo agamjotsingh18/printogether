@@ -3,11 +3,12 @@ import Hero from "../components/Hero";
 import Services from "./Services";
 import Portfolio from "./Portfolio";
 
-const Home = () => {
+const Home = ({ addToCart }) => {
   return (
     <>
       <Hero />
-      <Services />
+      {/* Pass addToCart to Services */}
+      <Services addToCart={addToCart} />
       <Portfolio />
     </>
   );

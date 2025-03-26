@@ -4,12 +4,25 @@
     text-align: center;
 }
 
+.hoodie-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    display: block; /* Make the link cover the entire hoodie area */
+  }
+
 .section-title {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 10px;
     color: #333;
 }
+
+.hoodie-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ff6600;
+    margin-top: 5px;
+  }
 
 .section-subtitle {
     font-size: 1.2rem;

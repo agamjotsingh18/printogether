@@ -11,6 +11,12 @@
     color: #333;
 }
 
+.frame-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    display: block; /* Make the link cover the entire photo frame area */
+  }
+
 .section-subtitle {
     font-size: 1.2rem;
     color: #666;
@@ -24,6 +30,13 @@
     gap: 30px;
     align-items: stretch;
 }
+
+.frame-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ff6600;
+    margin-top: 5px;
+  }
 
 .frame-item {
     flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */

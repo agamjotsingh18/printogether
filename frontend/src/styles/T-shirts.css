@@ -3,6 +3,19 @@
     background-color: #f9f9f9;
     text-align: center;
 }
+.tshirt-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ff6600;
+    margin-top: 5px;
+  }
+
+
+  .tshirt-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    display: block; /* Make the link cover the entire T-shirt area */
+  }
 
 .section-title {
     font-size: 2.5rem;
