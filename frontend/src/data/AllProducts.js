@@ -3,609 +3,533 @@ const products = [
     // Business Essentials
     {
         name: "Standard Business Card",
-        link: "/business-essentials/business-cards/standard"
+        link: "/services/business-essentials/business-cards/standard-business-card"
     },
     {
         name: "Premium Laminated Card",
-        link: "/business-essentials/business-cards/premium"
+        link: "/services/business-essentials/business-cards/premium-laminated-card"
     },
     {
         name: "Textured Business Card",
-        link: "/business-essentials/business-cards/textured"
+        link: "/services/business-essentials/business-cards/textured-business-card"
     },
     {
         name: "Square Business Card",
-        link: "/business-essentials/business-cards/square"
+        link: "/services/business-essentials/business-cards/square-business-card"
     },
     {
         name: "Rounded Corner Business Card",
-        link: "/business-essentials/business-cards/rounded-corner"
+        link: "/services/business-essentials/business-cards/rounded-corner-business-card"
     },
     {
         name: "Metallic Business Card",
-        link: "/business-essentials/business-cards/metallic"
+        link: "/services/business-essentials/business-cards/metallic-business-card"
     },
     {
         name: "Circle Business Card",
-        link: "/business-essentials/business-cards/circle"
+        link: "/services/business-essentials/business-cards/circle-business-card"
     },
     {
         name: "U-Shaped Business Card",
-        link: "/business-essentials/business-cards/u-shaped"
+        link: "/services/business-essentials/business-cards/u-shaped-business-card"
     },
     {
         name: "Custom Letterheads",
-        link: "/business-essentials/letterheads/custom"
+        link: "/services/business-essentials/letterheads/custom-letterheads"
     },
     {
         name: "Prescription Note Pad",
-        link: "/business-essentials/letterheads/prescription-note-pad"
+        link: "/services/business-essentials/letterheads/prescription-note-pad"
     },
     {
         name: "#10 Envelope (long)",
-        link: "/business-essentials/envelopes/10-envelope-long"
+        link: "/services/business-essentials/envelopes/hash10-envelope-(long)"
     },
     {
         name: "A5 Envelope",
-        link: "/business-essentials/envelopes/a5"
+        link: "/services/business-essentials/envelopes/a5-envelope"
     },
     {
         name: "A6 Envelope",
-        link: "/business-essentials/envelopes/a6"
+        link: "/services/business-essentials/envelopes/a6-envelope"
     },
     {
         name: "Kraft Envelope",
-        link: "/business-essentials/envelopes/kraft"
+        link: "/services/business-essentials/envelopes/kraft-envelope"
     },
     {
         name: "Full Colour Printed Bill Books",
-        link: "/business-essentials/invoices/full-colour-bill-books"
+        link: "/services/business-essentials/invoices/full-colour-printed-bill-books"
     },
     {
         name: "Black and White Printed Bill Books",
-        link: "/business-essentials/invoices/black-white-bill-books"
+        link: "/services/business-essentials/invoices/black-and-white-printed-bill-books"
     },
-    //Marketing Materials
+    // Marketing Materials
     {
         name: "Banners",
-        link: "/marketing-materials/banners"
+        link: "/services/marketing-materials/banners"
     },
     {
         name: "Custom Standee Cutout",
-        link: "/marketing-materials/custom-standee-cutout"
+        link: "/services/marketing-materials/custom-standee-cutout"
     },
     {
         name: "Acrylic Photo Frames",
-        link: "/marketing-materials/acrylic-sign-board/acrylic-photo-frames"
+        link: "/services/marketing-materials/acrylic-sign-board/acrylic-photo-frames"
     },
     {
         name: "Acrylic Name Plates",
-        link: "/marketing-materials/acrylic-sign-board/acrylic-name-plates"
+        link: "/services/marketing-materials/acrylic-sign-board/acrylic-name-plates"
     },
     {
         name: "Acrylic Calendar",
-        link: "/marketing-materials/acrylic-sign-board/acrylic-calendar"
+        link: "/services/marketing-materials/acrylic-sign-board/acrylic-calendar"
     },
     {
         name: "Acrylic Magnets",
-        link: "/marketing-materials/acrylic-sign-board/acrylic-magnets"
+        link: "/services/marketing-materials/acrylic-sign-board/acrylic-magnets"
     },
     {
         name: "Acrylic Keychains",
-        link: "/marketing-materials/acrylic-sign-board/acrylic-keychains"
+        link: "/services/marketing-materials/acrylic-sign-board/acrylic-keychains"
+    },
+    {
+        name: "Keychains",
+        link: "/services/corporate-gifting/keychains"
     },
     {
         name: "Acrylic Coasters",
-        link: "/marketing-materials/acrylic-sign-board/acrylic-coasters"
+        link: "/services/marketing-materials/acrylic-sign-board/acrylic-coasters"
     },
     {
         name: "Posters",
-        link: "/marketing-materials/posters"
+        link: "/services/marketing-materials/posters"
     },
     {
         name: "Photo Selfie Booth",
-        link: "/marketing-materials/photo-selfie-booth"
+        link: "/services/marketing-materials/photo-selfie-booth"
     },
     {
         name: "Half Fold Brochure",
-        link: "/marketing-materials/brochures/half-fold"
+        link: "/services/marketing-materials/brochures/half-fold-brochure"
     },
     {
         name: "Tri Fold Brochure",
-        link: "/marketing-materials/brochures/tri-fold"
+        link: "/services/marketing-materials/brochures/tri-fold-brochure"
     },
     {
         name: "Offer Flyers",
-        link: "/marketing-materials/flyers/offer"
+        link: "/services/marketing-materials/flyers/offer-flyers"
     },
     {
         name: "Business Flyers",
-        link: "/marketing-materials/flyers/business"
+        link: "/services/marketing-materials/flyers/business-flyers"
     },
     {
         name: "Product Catalog Flyers",
-        link: "/marketing-materials/flyers/product-catalog"
+        link: "/services/marketing-materials/flyers/product-catalog-flyers"
     },
     {
         name: "A4 Flyer Printing",
-        link: "/marketing-materials/flyers/a4"
+        link: "/services/marketing-materials/flyers/a4-flyer-printing"
     },
     {
         name: "A5 Flyer Printing",
-        link: "/marketing-materials/flyers/a5"
+        link: "/services/marketing-materials/flyers/a5-flyer-printing"
     },
     {
         name: "DL Flyer Printing",
-        link: "/marketing-materials/flyers/dl"
+        link: "/services/marketing-materials/flyers/dl-flyer-printing"
     },
     {
         name: "Standees",
-        link: "/marketing-materials/standees"
+        link: "/services/marketing-materials/standees"
     },
     // Packaging & Labels
     {
         name: "Matte Laminated Stickers",
-        link: "/packaging-labels/stickers/matte-laminated"
+        link: "/services/packaging-labels/stickers/matte-laminated-stickers"
     },
     {
         name: "Holographic Stickers",
-        link: "/packaging-labels/stickers/holographic"
+        link: "/services/packaging-labels/stickers/holographic-stickers"
     },
     {
         name: "Gold Foiling Stickers",
-        link: "/packaging-labels/stickers/gold-foiling"
+        link: "/services/packaging-labels/stickers/gold-foiling-stickers"
     },
     {
         name: "Spot UV Stickers",
-        link: "/packaging-labels/stickers/spot-uv"
+        link: "/services/packaging-labels/stickers/spot-uv-stickers"
     },
     {
         name: "Silver Foiling Stickers",
-        link: "/packaging-labels/stickers/silver-foiling"
+        link: "/services/packaging-labels/stickers/silver-foiling-stickers"
     },
     {
         name: "Dome Stickers",
-        link: "/packaging-labels/stickers/dome"
+        link: "/services/packaging-labels/stickers/dome-stickers"
     },
     {
         name: "Front Adhesive Stickers",
-        link: "/packaging-labels/stickers/front-adhesive"
+        link: "/services/packaging-labels/stickers/front-adhesive-stickers"
     },
     {
         name: "Custom Opaque Stickers",
-        link: "/packaging-labels/stickers/custom-opaque"
+        link: "/services/packaging-labels/stickers/custom-opaque-stickers"
     },
     {
         name: "Clear Stickers",
-        link: "/packaging-labels/stickers/clear"
+        link: "/services/packaging-labels/stickers/clear-stickers"
     },
     {
         name: "Metallic Gold Paper Labels",
-        link: "/packaging-labels/labels/metallic-gold"
+        link: "/services/packaging-labels/labels/metallic-gold-paper-labels"
     },
     {
         name: "Metallic Silver Paper Labels",
-        link: "/packaging-labels/labels/metallic-silver"
+        link: "/services/packaging-labels/labels/metallic-silver-paper-labels"
     },
     {
         name: "Kraft Paper Labels",
-        link: "/packaging-labels/labels/kraft"
+        link: "/services/packaging-labels/labels/kraft-paper-labels"
     },
     {
         name: "Premium White Labels",
-        link: "/packaging-labels/labels/premium-white"
+        link: "/services/packaging-labels/labels/premium-white-labels"
     },
     {
         name: "Clear Labels",
-        link: "/packaging-labels/labels/clear"
+        link: "/services/packaging-labels/labels/clear-labels"
     },
     {
         name: "Waterproof Labels",
-        link: "/packaging-labels/labels/waterproof"
+        link: "/services/packaging-labels/labels/water-proof-labels"
     },
     {
         name: "Gift Paper Bags",
-        link: "/packaging-labels/paper-bags/gift"
+        link: "/services/packaging-labels/paper-bags/gift-paper-bags"
     },
     {
         name: "Takeout Paper Bags",
-        link: "/packaging-labels/paper-bags/takeout"
+        link: "/services/packaging-labels/paper-bags/takeout-paper-bags"
     },
     {
         name: "Pre-printed Paper Bags",
-        link: "/packaging-labels/paper-bags/pre-printed"
+        link: "/services/packaging-labels/paper-bags/pre-printed-paper-bags"
     },
     {
         name: "Gift Boxes",
-        link: "/packaging-labels/gift-boxes"
+        link: "/services/packaging-labels/gift-boxes"
     },
     // Personalized Gifts
     {
         name: "Round Neck T-shirts",
-        link: "/personalized-gifts/tshirts/round-neck"
+        link: "/services/personalized-gifts/tshirts/round-neck-t-shirts"
     },
     {
         name: "Polo T-shirts",
-        link: "/personalized-gifts/tshirts/polo"
+        link: "/services/personalized-gifts/tshirts/polo-t-shirts"
     },
     {
         name: "V-Neck T-shirts",
-        link: "/personalized-gifts/tshirts/v-neck"
+        link: "/services/personalized-gifts/tshirts/v-neck-t-shirts"
     },
     {
         name: "Photo with LED Frames",
-        link: "/personalized-gifts/photo-frames/led"
+        link: "/services/personalized-gifts/photo-frames/photo-with-led-frames"
     },
     {
         name: "Photo with Classic Frames",
-        link: "/personalized-gifts/photo-frames/classic"
+        link: "/services/personalized-gifts/photo-frames/photo-with-classic-frames"
     },
     {
         name: "Photo with Wall Frames",
-        link: "/personalized-gifts/photo-frames/wall"
+        link: "/services/personalized-gifts/photo-frames/photo-with-wall-frames"
     },
     {
         name: "Canvas Photo with Frames",
-        link: "/personalized-gifts/photo-frames/canvas"
+        link: "/services/personalized-gifts/photo-frames/canvas-photo-with-frames"
     },
     {
         name: "Matte Photo with Frames",
-        link: "/personalized-gifts/photo-frames/matte"
+        link: "/services/personalized-gifts/photo-frames/matte-photo-with-frames"
     },
     {
         name: "Custom Acrylic Photo Frames",
-        link: "/personalized-gifts/photo-frames/acrylic"
+        link: "/services/personalized-gifts/photo-frames/custom-acrylic-photo-frames"
     },
     {
         name: "Frameless Photo Frames",
-        link: "/personalized-gifts/photo-frames/frameless"
+        link: "/services/personalized-gifts/photo-frames/frameless-photo-frames"
     },
     {
         name: "A5 Landscape Calendar",
-        link: "/personalized-gifts/calendars/a5-landscape"
+        link: "/services/personalized-gifts/calendars/a5-landscape-calendar"
     },
     {
         name: "Big Square Desktop Calendar",
-        link: "/personalized-gifts/calendars/big-square"
+        link: "/services/personalized-gifts/calendars/big-square-desktop-calendar"
     },
     {
         name: "Wall Calendar",
-        link: "/personalized-gifts/calendars/wall"
+        link: "/services/personalized-gifts/calendars/wall-calendar"
     },
     {
         name: "Long Calendar",
-        link: "/personalized-gifts/calendars/long"
+        link: "/services/personalized-gifts/calendars/long-calendar"
     },
     {
         name: "Calendar With Photo",
-        link: "/personalized-gifts/calendars/with-photo"
+        link: "/services/personalized-gifts/calendars/calendar-with-photo"
     },
     {
         name: "Frame Calendar",
-        link: "/personalized-gifts/calendars/frame"
+        link: "/services/personalized-gifts/calendars/frame-calendar"
     },
     // T-shirt Printing
     {
         name: "Custom Printed Zipper Hoodie",
-        link: "/tshirt-printing/hoodies/zipper"
+        link: "/services/tshirt-printing/hoodies/custom-printed-zipper-hoodie"
     },
     {
         name: "Custom Printed Pullover Hoodies",
-        link: "/tshirt-printing/hoodies/pullover"
+        link: "/services/tshirt-printing/hoodies/custom-printed-pullover-hoodie"
     },
     {
         name: "Embroidered Zip Hoodies",
-        link: "/tshirt-printing/hoodies/embroidered-zipper"
+        link: "/services/tshirt-printing/hoodies/embroidered-zip-hoodie"
     },
     {
         name: "Embroidered Pullover Hoodies",
-        link: "/tshirt-printing/hoodies/embroidered-pullover"
+        link: "/services/tshirt-printing/hoodies/embroidered-pullover-hoodie"
     },
     {
         name: "Sweatshirts",
-        link: "/tshirt-printing/sweatshirts"
+        link: "/services/tshirt-printing/sweatshirts"
     },
     {
         name: "Printed Plain Caps",
-        link: "/tshirt-printing/caps/printed-plain"
+        link: "/services/tshirt-printing/caps/printed-plain-caps"
     },
     {
         name: "Line Stitching Caps",
-        link: "/tshirt-printing/caps/line-stitching"
+        link: "/services/tshirt-printing/caps/line-stitching-caps"
     },
     {
         name: "Piping Caps",
-        link: "/tshirt-printing/caps/piping"
+        link: "/services/tshirt-printing/caps/piping-caps"
     },
     {
         name: "Tipping Caps",
-        link: "/tshirt-printing/caps/tipping"
+        link: "/services/tshirt-printing/caps/tipping-caps"
     },
     {
         name: "Jackets",
-        link: "/tshirt-printing/jackets"
+        link: "/services/tshirt-printing/jackets"
     },
     // Corporate Gifting
     {
+        name: "Mousepad",
+        link: "/services/corporate-gifting/mousepad"
+    },
+    {
+        name: "Awards and Trophies",
+        link: "/services/corporate-gifting/awards-trophies"
+    },
+    {
+        name: "Medals",
+        link: "/services/corporate-gifting/medals"
+    },
+    {
+        name: "Desktop Items",
+        link: "/services/corporate-gifting/desktop-items"
+    },
+    {
+        name: "Certificates",
+        link: "/services/corporate-gifting/certificates"
+    },
+    {
         name: "Corporate Executive Kit",
-        link: "/corporate-gifting/welcome-kits/corporate-executive-kit"
+        link: "/services/corporate-gifting/welcome-kits/corporate-executive-kit"
     },
     {
         name: "Creative Professional Kit",
-        link: "/corporate-gifting/welcome-kits/creative-professional-kit"
+        link: "/services/corporate-gifting/welcome-kits/creative-professional-kit"
     },
     {
         name: "Eco-Friendly Kit",
-        link: "/corporate-gifting/welcome-kits/eco-friendly-kit"
+        link: "/services/corporate-gifting/welcome-kits/eco-friendly-kit"
     },
     {
         name: "Startup Essentials Kit",
-        link: "/corporate-gifting/welcome-kits/startup-essentials-kit"
-    },
-    {
-        name: "Color Splash Hamper",
-        link: "color-splash-hamper"
-    },
-    {
-        name: "Eco-Friendly Holi Hamper",
-        link: "eco-friendly-holi-hamper"
-    },
-    {
-        name: "Premium Holi Hamper",
-        link: "premium-holi-hamper"
+        link: "/services/corporate-gifting/welcome-kits/startup-essentials-kit"
     },
     {
         name: "EcoGrip Notebook",
-        link: "/corporate-gifting/duo-sets/eco-grip-notebook"
+        link: "/services/corporate-gifting/duo-sets/eco-grip-notebook"
     },
     {
         name: "Elegant Journal Combo",
-        link: "/corporate-gifting/duo-sets/elegant-journal-combo"
+        link: "/services/corporate-gifting/duo-sets/elegant-journal-combo"
     },
     {
         name: "Elite Executive Combo",
-        link: "/corporate-gifting/duo-sets/elite-executive-combo"
+        link: "/services/corporate-gifting/duo-sets/elite-executive-combo"
     },
     {
         name: "Classic Leather Combo",
-        link: "/corporate-gifting/duo-sets/classic-leather-combo"
+        link: "/services/corporate-gifting/duo-sets/classic-leather-combo"
     },
     {
         name: "Matte Finish Diaries",
-        link: "/corporate-gifting/diaries/matte-finish"
+        link: "/services/corporate-gifting/diaries/matte-finish-diaries"
     },
     {
         name: "Vintage Tan Diaries",
-        link: "/corporate-gifting/diaries/vintage-tan"
+        link: "/services/corporate-gifting/diaries/vintage-tan-diaries"
     },
     {
         name: "Faux Leather Diaries",
-        link: "/corporate-gifting/diaries/faux-leather"
+        link: "/services/corporate-gifting/diaries/faux-leather-diaries"
     },
     {
         name: "Custom Canvas Diaries",
-        link: "/corporate-gifting/diaries/custom-canvas"
+        link: "/services/corporate-gifting/diaries/custom-canvas-diaries"
     },
     {
         name: "Wave Texture Diaries",
-        link: "/corporate-gifting/diaries/wave-texture"
+        link: "/services/corporate-gifting/diaries/wave-texture-diaries"
     },
     {
         name: "Eco Kraft Cover Diaries",
-        link: "/corporate-gifting/diaries/eco-kraft"
+        link: "/services/corporate-gifting/diaries/eco-kraft-cover-diaries"
     },
     {
         name: "Stylus Pen",
-        link: "/corporate-gifting/pens/stylus"
+        link: "/services/corporate-gifting/pens/stylus-pen"
     },
     {
         name: "Kraft Pen",
-        link: "/corporate-gifting/pens/kraft"
+        link: "/services/corporate-gifting/pens/kraft-pen"
     },
     {
         name: "Scribble Pen",
-        link: "/corporate-gifting/pens/scribble"
+        link: "/services/corporate-gifting/pens/scribble-pen"
     },
     {
         name: "Adroit Pen",
-        link: "/corporate-gifting/pens/adroit"
+        link: "/services/corporate-gifting/pens/adroit-pen"
     },
     {
         name: "Gilt Roller Ball Pen",
-        link: "/corporate-gifting/pens/gilt-roller"
+        link: "/services/corporate-gifting/pens/gilt-roller-pen"
     },
     {
         name: "Skate Ballpoint Pen",
-        link: "/corporate-gifting/pens/skate-ballpoint"
-    },
-    {
-        name: "Bookmarks",
-        link: "/corporate-gifting/bookmarks"
-    },
-    {
-        name: "Matte Laminated Stickers",
-        link: "/packaging-labels/stickers/matte-laminated"
-    },
-    {
-        name: "Holographic Stickers",
-        link: "/packaging-labels/stickers/holographic"
-    },
-    {
-        name: "Gold Foiling Stickers",
-        link: "/packaging-labels/stickers/gold-foiling"
-    },
-    {
-        name: "Spot UV Stickers",
-        link: "/packaging-labels/stickers/spot-uv"
-    },
-    {
-        name: "Silver Foiling Stickers",
-        link: "/packaging-labels/stickers/silver-foiling"
-    },
-    {
-        name: "Dome Stickers",
-        link: "/packaging-labels/stickers/dome"
-    },
-    {
-        name: "Front Adhesive Stickers",
-        link: "/packaging-labels/stickers/front-adhesive"
-    },
-    {
-        name: "Custom Opaque Stickers",
-        link: "/packaging-labels/stickers/custom-opaque"
-    },
-    {
-        name: "Clear Stickers",
-        link: "/packaging-labels/stickers/clear"
-    },
-    {
-        name: "Button Badges",
-        link: "/corporate-gifting/button-badges"
+        link: "/services/corporate-gifting/pens/skate-ballpoint-pen"
     },
     {
         name: "Slim SS Bottle",
-        link: "/corporate-gifting/drinkware/slim-ss"
+        link: "/services/corporate-gifting/drinkware/slim-ss-bottle"
     },
     {
         name: "Floral SS Bottle",
-        link: "/corporate-gifting/drinkware/floral-ss"
+        link: "/services/corporate-gifting/drinkware/floral-ss-bottle"
     },
     {
         name: "Vega SS Bottle",
-        link: "/corporate-gifting/drinkware/vega-ss"
+        link: "/services/corporate-gifting/drinkware/vega-ss-bottle"
     },
     {
         name: "Premium Black Sipper",
-        link: "/corporate-gifting/drinkware/premium-black"
+        link: "/services/corporate-gifting/drinkware/premium-black-sipper"
     },
     {
         name: "Multicolour Steel Bottle",
-        link: "/corporate-gifting/drinkware/multicolour-steel"
+        link: "/services/corporate-gifting/drinkware/multicolor-steel-bottle"
     },
     {
         name: "Pure Copper Water Bottle",
-        link: "/corporate-gifting/drinkware/pure-copper"
+        link: "/services/corporate-gifting/drinkware/pure-copper-bottle"
     },
     {
         name: "Lancy Hot & Cold White Sipper",
-        link: "/corporate-gifting/drinkware/lancy-hot-cold"
+        link: "/services/corporate-gifting/drinkware/lancy-hot-cold-sipper"
     },
     {
         name: "Glossy White Sipper",
-        link: "/corporate-gifting/drinkware/glossy-white"
+        link: "/services/corporate-gifting/drinkware/glossy-white-sipper"
     },
     {
         name: "Supreme Blue Sipper",
-        link: "/corporate-gifting/drinkware/supreme-blue"
+        link: "/services/corporate-gifting/drinkware/supreme-blue-sipper"
     },
     {
         name: "Classic Black Sipper",
-        link: "/corporate-gifting/drinkware/classic-black"
+        link: "/services/corporate-gifting/drinkware/classic-black-sipper"
     },
     {
-        name: "Mug (Standard)",
-        link: "/corporate-gifting/drinkware/mug"
+        name: "Standard Mug",
+        link: "/services/personalized-gifts/mugs/standard-mug"
     },
     {
         name: "Mini Mug",
-        link: "/corporate-gifting/drinkware/mini-mug"
+        link: "/services/personalized-gifts/mugs/mini-mug"
     },
     {
         name: "Shimmer Dark Grey Mug",
-        link: "/corporate-gifting/drinkware/shimmer-dark-grey"
+        link: "/services/personalized-gifts/mugs/shimmer-dark-grey-mug"
     },
     {
         name: "Regal Black Mug",
-        link: "/corporate-gifting/drinkware/regal-black"
+        link: "/services/personalized-gifts/mugs/regal-black-mug"
     },
     {
         name: "Traveler Black Mug",
-        link: "/corporate-gifting/drinkware/traveler-black"
+        link: "/services/personalized-gifts/mugs/traveler-black-mug"
     },
     {
         name: "Sleek Black Mug",
-        link: "/corporate-gifting/drinkware/sleek-black"
+        link: "/services/personalized-gifts/mugs/sleek-black-mug"
     },
     {
         name: "Apex Carry Laptop Bag",
-        link: "/corporate-gifting/bags/apex-carry"
-    },
-    {
-        name: "SkyGlide Laptop Bag",
-        link: "/corporate-gifting/bags/skyglide"
+        link: "/services/corporate-gifting/bags/apex-carry-laptop-bag"
     },
     {
         name: "Prestige Pro Laptop Bag",
-        link: "/corporate-gifting/bags/prestige-pro"
+        link: "/services/corporate-gifting/bags/prestige-pro-laptop-bag"
     },
     {
         name: "Vanguard Laptop Bag",
-        link: "/corporate-gifting/bags/vanguard"
+        link: "/services/corporate-gifting/bags/vanguard-laptop-bag"
     },
     {
         name: "Nexus Essential Laptop Bag",
-        link: "/corporate-gifting/bags/nexus-essential"
+        link: "/services/corporate-gifting/bags/nexus-essential-laptop-bag"
     },
     {
         name: "Elite Horizon Laptop Bag",
-        link: "/corporate-gifting/bags/elite-horizon"
+        link: "/services/corporate-gifting/bags/elite-horizon-laptop-bag"
     },
     {
         name: "SlimGuard Laptop Sleeve",
-        link: "/corporate-gifting/bags/slimguard"
+        link: "/services/corporate-gifting/bags/slimguard-laptop-sleeve"
     },
     {
         name: "Infinity Laptop Bag",
-        link: "/corporate-gifting/bags/infinity"
+        link: "/services/corporate-gifting/bags/infinity-laptop-bag"
     },
     {
-        name: "Mobile Pop Socket (Customizable)",
-        link: "/corporate-gifting/mobile-pop-socket"
-    },
-    {
-        name: "Custom Printed Luggage Tag (55x85mm)",
-        link: "/corporate-gifting/luggage-tag"
-    },
-    {
-        name: "Event ID Card",
-        link: "/corporate-gifting/id-cards/event"
-    },
-    {
-        name: "PVC ID Card",
-        link: "/corporate-gifting/id-cards/pvc"
-    },
-    {
-        name: "Paper ID Card",
-        link: "/corporate-gifting/id-cards/paper"
-    },
-    {
-        name: "Standard ID Card and Lanyard Combo",
-        link: "/corporate-gifting/id-cards/standard-combo"
-    },
-    {
-        name: "Premium ID Card and Lanyard Combo",
-        link: "/corporate-gifting/id-cards/premium-combo"
-    },
-    {
-        name: "ID Card and Standard Holder Combo",
-        link: "/corporate-gifting/id-cards/standard-holder"
-    },
-    {
-        name: "ID Card and Premium Holder Combo",
-        link: "/corporate-gifting/id-cards/premium-holder"
-    },
-    {
-        name: "Thank You Card",
-        link: "/corporate-gifting/thank-you-card"
+        name: "Luggage Tags",
+        link: "/services/corporate-gifting/luggage-tags"
     },
     {
         name: "Temperature Display Flask",
-        link: "/corporate-gifting/temperature-flask"
-    },
-    {
-        name: "Clock with Speaker (Digital Display)",
-        link: "/corporate-gifting/clock-with-speaker"
-    },
+        link: "/services/corporate-gifting/temperature-display-flask"
+    }
 ];
 
 export default products;
