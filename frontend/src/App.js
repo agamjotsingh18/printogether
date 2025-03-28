@@ -172,6 +172,7 @@ import NexusEssentialLaptopBag from "./itemdetail/NexusEssentialLaptopBag";
 import VanguardLaptopBag from "./itemdetail/VanguardLaptopBag";
 import PrestigeProLaptopBag from "./itemdetail/PrestigeProLaptopBag";
 import ApexCarryLaptopBag from "./itemdetail/ApexCarryLaptopBag";
+import Breadcrumbs from './components/Breadcrumbs';
 
 const App = () => {
   // Initialize cartItems state with data from localStorage
@@ -230,6 +231,7 @@ const App = () => {
       <Navbar cartItems={cartItems} addToCart={addToCart} removeFromCart={removeFromCart} />
       <SubNavbar />
       <div style={{ width: "100vw", overflowX: "clip", maxWidth: "100%" }}>
+      <Breadcrumbs />
         <Routes>
           <Route path="/" element={<Home addToCart={addToCart} />} />
           <Route path="/services" element={<Services addToCart={addToCart} />} />
