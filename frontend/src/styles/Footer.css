@@ -21,8 +21,7 @@
   flex: 1;
   min-width: 200px;
 }
-
-/* Logo Container with white background */
+/* Logo Container */
 .footer-logo-container {
   background: white;
   padding: 15px;
@@ -32,13 +31,29 @@
   justify-content: center;
   height: fit-content;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
 }
 
 .footer-logo {
-  height: 80px;
-  width: auto;
+  height: auto;
+  width: 100%;
+  max-width: 150px;
   object-fit: contain;
 }
+
+/* Mobile-specific logo styles */
+@media (max-width: 768px) {
+  .footer-logo-container {
+    padding: 10px;
+    max-width: 80px;
+  }
+  
+  .footer-logo {
+    max-width: 60px;
+  }
+}
+
+/* The rest of your existing CSS remains the same */
 
 .footer-heading {
   font-size: 1.1rem;
