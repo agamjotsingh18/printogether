@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import { FaInstagram, FaEnvelope, FaFacebookF, FaLinkedinIn, FaPinterestP, FaPhoneAlt } from "react-icons/fa";
-import logo from "../assets/logoP.png";
+import logo from "../assets/printogether-logo-nb.png";
+import logoMobile from "../assets/printogether-favicon.jpeg";
 import "../styles/Footer.css";
-import ToastNotification from "./ToastNotification"; // Import the ToastNotification component
+import ToastNotification from "./ToastNotification";
 
 const Footer = () => {
   const [showToast, setShowToast] = useState(false);
@@ -13,7 +14,6 @@ const Footer = () => {
     e.preventDefault();
     const email = e.target.email.value;
 
-    // Send POST request to /subscribe endpoint
     fetch("http://localhost:5000/subscribe", {
       method: "POST",
       headers: {
@@ -23,22 +23,26 @@ const Footer = () => {
     })
       .then((response) => response.text())
       .then((data) => {
-        setToastMessage(data); // Set the toast message
-        setShowToast(true); // Show the toast
+        setToastMessage(data);
+        setShowToast(true);
+        e.target.reset();
       })
       .catch((error) => {
         console.error("Error:", error);
-        setToastMessage("Failed to subscribe. Please try again."); // Error message
-        setShowToast(true); // Show the toast
+        setToastMessage("Failed to subscribe. Please try again.");
+        setShowToast(true);
       });
   };
 
   return (
     <Box className="footer">
       <Box className="footer-container">
-        {/* Logo Section */}
-        <Box className="footer-logo">
-          <img src={logo} height="90px" alt="Print Fusion Logo" className="logo" />
+        {/* Logo Section - Different logo for mobile */}
+        <Box className="footer-logo-container">
+          <picture>
+            <source srcSet={logoMobile} media="(max-width: 768px)" />
+            <img src={logo} alt="Print Fusion Logo" className="footer-logo" />
+          </picture>
         </Box>
 
         {/* Our Company */}
@@ -47,23 +51,6 @@ const Footer = () => {
           <a href="/about">About us</a>
           <a href="mailto:printfusionindia@gmail.com?subject=Job Application">Careers</a>
           <a href="/blog">Blog</a>
-
-          {/* Newsletter Section */}
-          <Box className="newsletter">
-            <Typography className="footer-heading">Subscribe to our Newsletter</Typography>
-            <form className="newsletter-form" onSubmit={handleSubscribe}>
-              <input
-                type="email"
-                name="email"
-                placeholder="Enter your email"
-                className="newsletter-input"
-                required
-              />
-              <button type="submit" className="newsletter-button">
-                Subscribe
-              </button>
-            </form>
-          </Box>
         </Box>
 
         {/* Important Links */}
@@ -78,10 +65,12 @@ const Footer = () => {
         <Box className="footer-column contact-info">
           <Typography className="footer-heading">Contact</Typography>
           <Box className="contact-item">
-            <a href="tel:+919319042075"><FaPhoneAlt /> +91 9319042075</a>
+            <FaPhoneAlt className="contact-icon" />
+            <a href="tel:+919319042075">+91 9319042075</a>
           </Box>
           <Box className="contact-item">
-            <a href="mailto:printfusionindia@gmail.com"><FaEnvelope /> printfusionindia@gmail.com</a>
+            <FaEnvelope className="contact-icon" />
+            <a href="mailto:printfusionindia@gmail.com">printfusionindia@gmail.com</a>
           </Box>
           
           <Box className="map-container">
@@ -95,19 +84,36 @@ const Footer = () => {
               loading="lazy"
             ></iframe>
           </Box>
+        </Box>
 
-          <Typography className="footer-heading">Follow us</Typography>
+        {/* Newsletter Section */}
+        <Box className="footer-column newsletter-column">
+          <Typography className="footer-heading">Subscribe to our Newsletter</Typography>
+          <form className="newsletter-form" onSubmit={handleSubscribe}>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              className="newsletter-input"
+              required
+            />
+            <button type="submit" className="newsletter-button">
+              Subscribe
+            </button>
+          </form>
+
+          <Typography className="footer-heading social-heading">Follow us</Typography>
           <Box className="footer-social">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <FaInstagram className="social-icon instagram" />
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <FaFacebookF className="social-icon facebook" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <FaLinkedinIn className="social-icon linkedin" />
             </a>
-            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
               <FaPinterestP className="social-icon pinterest" />
             </a>
           </Box>
@@ -116,16 +122,16 @@ const Footer = () => {
 
       {/* Copyright Section */}
       <Typography className="footer-text">
-        © 2025 <a href="/" className="footer-brand">Print Fusion</a>. All rights reserved.
+        © {new Date().getFullYear()} <a href="/" className="footer-brand">Print Fusion</a>. All rights reserved.
       </Typography>
 
       {/* Toast Notification */}
-      {showToast && (
-        <ToastNotification
-          message={toastMessage}
-          onClose={() => setShowToast(false)}
-        />
-      )}
+      <ToastNotification
+        open={showToast}
+        message={toastMessage}
+        onClose={() => setShowToast(false)}
+        severity={toastMessage.includes("subscribed") ? "success" : "error"}
+      />
     </Box>
   );
 };

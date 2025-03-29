@@ -25,7 +25,9 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import products from "../data/AllProducts"; // Import products from the new file
+import products from "../data/AllProducts";
+import logo from "../assets/printogether-logo-nb.png";
+import logop from "../assets/printogether-favicon.jpeg";
 
 const Navbar = ({ cartItems, addToCart, removeFromCart }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -112,18 +114,9 @@ const Navbar = ({ cartItems, addToCart, removeFromCart }) => {
       role="presentation"
     >
       {/* Logo */}
-      <Typography
-        variant="h5"
-        sx={{
-          color: "#333",
-          fontWeight: "bold",
-          fontFamily: "Poppins, sans-serif",
-          p: 3,
-          textAlign: "center",
-        }}
-      >
-        PRINT FUSION
-      </Typography>
+      <Box sx={{ textAlign: "center", p: 2 }}>
+  <img src={logop} alt="Printogether Logo" style={{ height: "60px" }} />
+</Box>
 
       {/* Navigation Links */}
       <List sx={{ flex: 1 }}>
@@ -329,12 +322,9 @@ const Navbar = ({ cartItems, addToCart, removeFromCart }) => {
       >
         <Toolbar sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           {/* Logo */}
-          <Typography
-            variant="h5"
-            sx={{ color: "white", fontWeight: "bold", fontFamily: "Poppins, sans-serif" }}
-          >
-            PRINT FUSION
-          </Typography>
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+    <img src={logo} alt="Printogether Logo" style={{ height: "50px", marginRight: "10px" }} />
+  </Box>
 
           {/* Cart Icon for Mobile */}
           <Box sx={{ display: { xs: "flex", md: "none" }, alignItems: "center", gap: 1 }}>
